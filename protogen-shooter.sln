@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-IntegrationTests-Ed
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoYeet.Core", "ProtoYeet.Core.csproj", "{eb3f26e3-35db-485a-3c18-40806c4e1ec7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu.csproj", "{1c71c6fe-7415-e600-708a-b72053d4005e}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoYeet.Ui", "ProtoYeet.Ui.csproj", "{91eb2991-f6ee-9af3-2ce2-c257b5d43772}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoYeet.IO", "ProtoYeet.IO.csproj", "{9acd4705-aa6c-682d-9a78-093fd7ff5e51}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-PoolMonitor-Editor", "Zenject-PoolMonitor-Editor.csproj", "{33570ba0-dcb6-3a00-2c4f-da9c149a4331}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-UnitTests-Editor", "Zenject-UnitTests-Editor.csproj", "{e2b1a441-d74f-e6e7-72fe-83062bdbeb2f}"
@@ -38,6 +44,12 @@ Global
 		{3556ac9e-fcdf-b053-f788-e0ecadea9714}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{eb3f26e3-35db-485a-3c18-40806c4e1ec7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{eb3f26e3-35db-485a-3c18-40806c4e1ec7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1c71c6fe-7415-e600-708a-b72053d4005e}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1c71c6fe-7415-e600-708a-b72053d4005e}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{91eb2991-f6ee-9af3-2ce2-c257b5d43772}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{91eb2991-f6ee-9af3-2ce2-c257b5d43772}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9acd4705-aa6c-682d-9a78-093fd7ff5e51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9acd4705-aa6c-682d-9a78-093fd7ff5e51}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33570ba0-dcb6-3a00-2c4f-da9c149a4331}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{33570ba0-dcb6-3a00-2c4f-da9c149a4331}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{e2b1a441-d74f-e6e7-72fe-83062bdbeb2f}.Debug|Any CPU.ActiveCfg = Debug|Any CPU

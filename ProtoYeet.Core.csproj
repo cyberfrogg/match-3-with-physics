@@ -41,20 +41,36 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Systems/IInitializeSystem.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Log/Installers/LogInstaller.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Log/Services/ILoggerService.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading/Impl/SceneLoadingService.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading/ISceneLoadingService.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Systems/IUpdateSystem.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Bootstrap.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Log/Services/Impl/UnityLoggerService.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Systems/IUiInitialize.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Splash/SplashManager.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Splash/Installers/SplashInstaller.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Loading/Installers/LoadingInstaller.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Systems/ISystem.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Installers/BootstrapInstaller.cs" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading/Impl" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Log/Services" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Bootstrap" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Log/Installers" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Splash" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Systems" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Splash/Installers" />
      <None Include="Assets/Scripts/ProtoYeet/Core/ProtoYeet.Core.asmdef" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Log/Services/Impl" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Log" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Installers" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Installers" />
      <Reference Include="UnityEngine">
      <HintPath>/var/home/cyberfrogg/.distrobox/dev-unity/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

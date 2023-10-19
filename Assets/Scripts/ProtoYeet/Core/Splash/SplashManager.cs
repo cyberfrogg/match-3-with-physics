@@ -10,7 +10,7 @@ namespace ProtoYeet.Core.Splash
 
         private void Start()
         {
-            _sceneLoadingService.LoadScene("Game");
+            _sceneLoadingService.LoadScene("Menu");
         }
     }
 }
