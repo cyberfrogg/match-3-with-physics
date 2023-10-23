@@ -2,7 +2,8 @@
     "name": "ProtoYeet.Core",
     "rootNamespace": "",
     "references": [
-        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4"
+        "GUID:0d8beb7f090555447a6cf5ce9e54dbb4",
+        "GUID:4bc079e0cf77cd280ab060f2c5c5c034"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],

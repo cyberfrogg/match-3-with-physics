@@ -1,3 +1,5 @@
+using System;
+
 namespace ProtoYeet.IO.Services.PlayerPrefs.Impl
 {
     public class RawPlayerPrefsManager : IPlayerPrefsManager
@@ -28,20 +30,27 @@ namespace ProtoYeet.IO.Services.PlayerPrefs.Impl
             }
         }
 
-        public void GetValue<T>(string key, T defaultValue)
+        public T GetValue<T>(string key, T defaultValue)
         {
+            object collectedValue = null;
+            
             switch (defaultValue)
             {
                 case string stringValue:
-                    UnityEngine.PlayerPrefs.GetString(key, stringValue);
+                    collectedValue = UnityEngine.PlayerPrefs.GetString(key, stringValue);
                     break;
                 case int intValue:
-                    UnityEngine.PlayerPrefs.GetInt(key, intValue);
+                    collectedValue = UnityEngine.PlayerPrefs.GetInt(key, intValue);
                     break;
                 case float floatValue:
-                    UnityEngine.PlayerPrefs.GetFloat(key, floatValue);
+                    collectedValue = UnityEngine.PlayerPrefs.GetFloat(key, floatValue);
                     break;
             }
+
+            if (collectedValue == null)
+                throw new NotImplementedException("");
+
+            return (T)collectedValue;
         }
     }
 }

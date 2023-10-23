@@ -51,10 +51,13 @@
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Log/Services/Impl/UnityLoggerService.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Systems/IUiInitialize.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Splash/SplashManager.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/LevelLoading/Impl/LevelLoadingService.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/LevelLoading/ILevelLoadingService.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Splash/Installers/SplashInstaller.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Loading/Installers/LoadingInstaller.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Systems/ISystem.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Installers/BootstrapInstaller.cs" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/LevelLoading/Impl" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading/Impl" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Log/Services" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading" />
@@ -63,6 +66,7 @@
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Log/Installers" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Splash" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/LevelLoading" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Systems" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Splash/Installers" />
      <None Include="Assets/Scripts/ProtoYeet/Core/ProtoYeet.Core.asmdef" />
@@ -760,6 +764,10 @@
     <ProjectReference Include="Zenject.csproj">
       <Project>{b35301c0-20e4-92e5-677d-b7a84a4eb788}</Project>
       <Name>Zenject</Name>
+    </ProjectReference>
+    <ProjectReference Include="ProtoYeet.IO.csproj">
+      <Project>{9acd4705-aa6c-682d-9a78-093fd7ff5e51}</Project>
+      <Name>ProtoYeet.IO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

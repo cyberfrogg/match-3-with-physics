@@ -7,7 +7,7 @@ namespace ProtoYeet.IO.Installers
     {
         public override void InstallBindings()
         {
-            Container.Bind<RawPlayerPrefsManager>().AsSingle();
+            Container.BindInterfacesAndSelfTo<RawPlayerPrefsManager>().AsSingle();
         }
     }
 }

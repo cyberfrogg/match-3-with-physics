@@ -747,6 +747,10 @@
       <Project>{91eb2991-f6ee-9af3-2ce2-c257b5d43772}</Project>
       <Name>ProtoYeet.Ui</Name>
     </ProjectReference>
+    <ProjectReference Include="ProtoYeet.IO.csproj">
+      <Project>{9acd4705-aa6c-682d-9a78-093fd7ff5e51}</Project>
+      <Name>ProtoYeet.IO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

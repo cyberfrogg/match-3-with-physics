@@ -10,9 +10,9 @@ namespace Menu.Ui.MenuScreen
     {
         [SerializeField] private AButton StartCampaignButton;
         [SerializeField] private AButton StartSandBoxButton;
-
-        [Inject] private ILoggerService _logger;
         
+        [Inject] private ILoggerService _logger;
+
         public void Initialize()
         {
             StartCampaignButton.Click += OnStartCampaign;

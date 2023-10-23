@@ -44,6 +44,7 @@
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts" />
      <Folder Include="Assets/Resources" />
+     <Folder Include="Assets/Scenes/OtherLevels" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/Scripts/Game" />
      <Reference Include="UnityEngine">
