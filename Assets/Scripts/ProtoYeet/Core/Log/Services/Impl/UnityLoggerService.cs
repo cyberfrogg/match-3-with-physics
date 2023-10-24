@@ -19,6 +19,12 @@ namespace ProtoYeet.Core.Log.Services.Impl
             Debug.Log($"[Bootstrap]: {message}");
         }
 
+        public void Log(object logClass, string message)
+        {
+            var className = logClass.GetType();
+            Debug.Log($"[{className.Name}]: {message}");
+        }
+
         public void Warn(string message)
         {
             Debug.LogWarning(message);

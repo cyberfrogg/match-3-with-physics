@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using ProtoYeet.Core.Log.Services;
 using ProtoYeet.Core.Systems;
 using Zenject;
 
@@ -10,7 +9,6 @@ namespace ProtoYeet.Core.Bootstrap
         ITickable
     {
         private readonly List<IUiInitialize> _uiInitializes;
-        private readonly ILoggerService _loggerService;
         private readonly List<IInitializeSystem> _initializeSystems = new();
         private readonly List<IUpdateSystem> _update = new();
         
@@ -18,11 +16,9 @@ namespace ProtoYeet.Core.Bootstrap
         
         public Bootstrap(
             List<ISystem> systems,
-            List<IUiInitialize> uiInitializes,
-            ILoggerService loggerService
+            List<IUiInitialize> uiInitializes
             )
         {
-            _loggerService = loggerService;
             
             _uiInitializes = uiInitializes;
             
