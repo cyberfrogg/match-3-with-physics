@@ -1,3 +1,4 @@
+using ProtoYeet.Core.Loading.Services.LevelLoading;
 using ProtoYeet.Core.Log.Services;
 using ProtoYeet.Core.Systems;
 using ProtoYeet.Ui.Abstracts;
@@ -12,6 +13,7 @@ namespace Menu.Ui.MenuScreen
         [SerializeField] private AButton StartSandBoxButton;
         
         [Inject] private ILoggerService _logger;
+        [Inject] private ILevelLoadingService _levelLoadingService;
 
         public void Initialize()
         {
@@ -27,6 +29,7 @@ namespace Menu.Ui.MenuScreen
         private void OnStartSandBox()
         {
             _logger.Log("Starting sandbox...");
+            _levelLoadingService.Load("SandBox");
         }
     }
 }

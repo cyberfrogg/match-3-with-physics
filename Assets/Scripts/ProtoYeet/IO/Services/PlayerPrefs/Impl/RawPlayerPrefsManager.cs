@@ -30,6 +30,11 @@ namespace ProtoYeet.IO.Services.PlayerPrefs.Impl
             }
         }
 
+        public void DeleteKey(string key)
+        {
+            UnityEngine.PlayerPrefs.DeleteKey(key);
+        }
+
         public T GetValue<T>(string key, T defaultValue)
         {
             object collectedValue = null;

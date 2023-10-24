@@ -1,3 +1,4 @@
+using Menu.Services.Impl;
 using Zenject;
 
 namespace Menu.Installers
@@ -6,7 +7,7 @@ namespace Menu.Installers
     {
         public override void InstallBindings()
         {
-            
+            Container.BindInterfacesAndSelfTo<MenuLoadLevelsService>().AsSingle();
         }
     }
 }

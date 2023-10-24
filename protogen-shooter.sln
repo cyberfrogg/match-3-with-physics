@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Game", "Game.csproj", "{427
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProtoYeet.Abstracts", "ProtoYeet.Abstracts.csproj", "{7985fa49-4748-1451-449b-706fd9e27dc8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loading", "Loading.csproj", "{87764fe8-2089-4746-bcda-b0e7d97a4e7c}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zenject-Editor", "Zenject-Editor.csproj", "{4d409d0d-ef90-6926-0cfc-4b8df9e927a2}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{d26df58d-0388-241d-5739-abb53f11b700}"
@@ -46,6 +48,8 @@ Global
 		{4275358e-4296-ee2b-a5a9-b1d11e3bc575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7985fa49-4748-1451-449b-706fd9e27dc8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{7985fa49-4748-1451-449b-706fd9e27dc8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87764fe8-2089-4746-bcda-b0e7d97a4e7c}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87764fe8-2089-4746-bcda-b0e7d97a4e7c}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4d409d0d-ef90-6926-0cfc-4b8df9e927a2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4d409d0d-ef90-6926-0cfc-4b8df9e927a2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{d26df58d-0388-241d-5739-abb53f11b700}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
