@@ -1,8 +1,8 @@
-using UnityEngine;
+using ProtoYeet.Abstracts;
 
 namespace Game.Views.Player.Impl
 {
-    public class PlayerView : MonoBehaviour, IPlayerView
+    public class PlayerView : MonoView, IPlayerView
     {
         
     }

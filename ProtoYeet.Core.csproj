@@ -57,9 +57,13 @@
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Loading/Installers/LoadingInstaller.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Systems/ISystem.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Installers/BootstrapInstaller.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Services/GameLoop/Impl/GameLoopManager.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Services/GameLoop/IGameLoopManager.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Core/Factory/FactoryUtils.cs" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/LevelLoading/Impl" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading/Impl" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Log/Services" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Services" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/SceneLoading" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Bootstrap" />
@@ -68,10 +72,13 @@
      <Folder Include="Assets/Scripts/ProtoYeet/Core" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Services/LevelLoading" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Systems" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Services/GameLoop/Impl" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Services/GameLoop" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Splash/Installers" />
      <None Include="Assets/Scripts/ProtoYeet/Core/ProtoYeet.Core.asmdef" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Log/Services/Impl" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading" />
+     <Folder Include="Assets/Scripts/ProtoYeet/Core/Factory" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Log" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Loading/Installers" />
      <Folder Include="Assets/Scripts/ProtoYeet/Core/Bootstrap/Installers" />
@@ -768,6 +775,10 @@
     <ProjectReference Include="ProtoYeet.IO.csproj">
       <Project>{9acd4705-aa6c-682d-9a78-093fd7ff5e51}</Project>
       <Name>ProtoYeet.IO</Name>
+    </ProjectReference>
+    <ProjectReference Include="ProtoYeet.Abstracts.csproj">
+      <Project>{7985fa49-4748-1451-449b-706fd9e27dc8}</Project>
+      <Name>ProtoYeet.Abstracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

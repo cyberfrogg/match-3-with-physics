@@ -1,6 +1,7 @@
 using Game.Presenters.Player;
 using Game.Presenters.Player.Impl;
 using Game.Views.Player;
+using ProtoYeet.Core.Factory;
 using Zenject;
 
 namespace Game.Factories.Player.Impl
@@ -19,9 +20,9 @@ namespace Game.Factories.Player.Impl
         public IPlayerPresenter Create(IPlayerView playerView)
         {
             var presenter = new PlayerPresenter(playerView);
-            _container.Inject(presenter);
+            FactoryUtils.Inject(_container, presenter);
 
-            _container.Bind<IPlayerPresenter>().FromInstance(presenter);
+            _container.BindInterfacesAndSelfTo<IPlayerPresenter>().FromInstance(presenter).NonLazy();
 
             return presenter;
         }

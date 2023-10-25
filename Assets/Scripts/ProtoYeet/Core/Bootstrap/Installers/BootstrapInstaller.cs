@@ -1,3 +1,4 @@
+using ProtoYeet.Core.Bootstrap.Services.GameLoop.Impl;
 using Zenject;
 
 namespace ProtoYeet.Core.Bootstrap.Installers
@@ -7,6 +8,7 @@ namespace ProtoYeet.Core.Bootstrap.Installers
         public override void InstallBindings()
         {
             Container.BindInterfacesAndSelfTo<Bootstrap>().AsSingle().NonLazy();
+            Container.BindInterfacesAndSelfTo<GameLoopManager>().AsSingle().NonLazy();
         }
     }
 }

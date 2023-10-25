@@ -5,12 +5,10 @@ using Zenject;
 namespace ProtoYeet.Core.Bootstrap
 {
     public class Bootstrap : 
-        IInitializable, 
-        ITickable
+        IInitializable
     {
         private readonly List<IUiInitialize> _uiInitializes;
         private readonly List<IInitializeSystem> _initializeSystems = new();
-        private readonly List<IUpdateSystem> _update = new();
         
         private bool _isInitialized;
         
@@ -26,9 +24,6 @@ namespace ProtoYeet.Core.Bootstrap
             {
                 if(system is IInitializeSystem initializeSystem)
                     _initializeSystems.Add(initializeSystem);
-                
-                if(system is IUpdateSystem updateSystem)
-                    _update.Add(updateSystem);
             }
         }
         
@@ -49,14 +44,6 @@ namespace ProtoYeet.Core.Bootstrap
             foreach (var uiInitialize in _uiInitializes)
             {
                 uiInitialize.Initialize();
-            }
-        }
-
-        public void Tick()
-        {
-            foreach (var updateSystem in _update)
-            {
-                updateSystem.Update();
             }
         }
     }

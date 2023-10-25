@@ -3,7 +3,7 @@ using ProtoYeet.Abstracts;
 
 namespace Game.Presenters.Player
 {
-    public interface IPlayerPresenter : IPresenter<IPlayerView>
+    public interface IPlayerPresenter : IPresenter<IPlayerView>, IInjectable
     {
         
     }

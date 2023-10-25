@@ -43,6 +43,8 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/ProtoYeet/Abstracts/IPresenter.cs" />
      <Compile Include="Assets/Scripts/ProtoYeet/Abstracts/IView.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Abstracts/IInjectable.cs" />
+     <Compile Include="Assets/Scripts/ProtoYeet/Abstracts/MonoView.cs" />
      <Folder Include="Assets/Scripts/ProtoYeet/Abstracts" />
      <None Include="Assets/Scripts/ProtoYeet/Abstracts/ProtoYeet.Abstracts.asmdef" />
      <Reference Include="UnityEngine">
