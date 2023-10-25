@@ -41,17 +41,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/Game/Data/GameFieldView.cs" />
-     <Compile Include="Assets/Scripts/Game/Providers/GameFieldProvider/Impl/GameFieldProvider.cs" />
-     <Compile Include="Assets/Scripts/Game/Installers/LevelInstaller.cs" />
-     <Compile Include="Assets/Scripts/Game/Providers/GameFieldProvider/IGameFieldProvider.cs" />
-     <Compile Include="Assets/Scripts/Game/Views/Player/Impl/PlayerView.cs" />
-     <Compile Include="Assets/Scripts/Game/Views/Player/IPlayerView.cs" />
-     <Compile Include="Assets/Scripts/Game/Systems/InitializeGameSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Presenters/Player/Impl/PlayerPresenter.cs" />
+     <Compile Include="Assets/Scripts/Game/Views/Player/IPlayerView.cs" />
+     <Compile Include="Assets/Scripts/Game/Providers/GameFieldProvider/IGameFieldProvider.cs" />
      <Compile Include="Assets/Scripts/Game/Presenters/Player/IPlayerPresenter.cs" />
-     <Compile Include="Assets/Scripts/Game/Factories/Player/IPlayerPresenterFactory.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/InitializeGameSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/GameFieldView.cs" />
+     <Compile Include="Assets/Scripts/Game/Views/Player/Impl/PlayerView.cs" />
      <Compile Include="Assets/Scripts/Game/Factories/Player/Impl/PlayerPresenterFactory.cs" />
+     <Compile Include="Assets/Scripts/Game/Factories/Player/IPlayerPresenterFactory.cs" />
+     <Compile Include="Assets/Scripts/Game/Installers/LevelInstaller.cs" />
+     <Compile Include="Assets/Scripts/Game/Providers/GameFieldProvider/Impl/GameFieldProvider.cs" />
      <Folder Include="Assets/Scripts/Game/Presenters/Player" />
      <Folder Include="Assets/Scripts/Game/Views/Player/Impl" />
      <Folder Include="Assets/Scripts/Game/Providers/GameFieldProvider/Impl" />

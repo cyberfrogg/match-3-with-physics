@@ -28,7 +28,6 @@ namespace Menu.Ui.MenuScreen
 
         private void OnStartSandBox()
         {
-            _logger.Log("Starting sandbox...");
             _levelLoadingService.Load("SandBox");
         }
     }

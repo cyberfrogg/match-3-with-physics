@@ -41,8 +41,8 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/Loading/Installers/LoadingManagerInstaller.cs" />
      <Compile Include="Assets/Scripts/Loading/LoadingManager.cs" />
+     <Compile Include="Assets/Scripts/Loading/Installers/LoadingManagerInstaller.cs" />
      <Folder Include="Assets/Scripts/Loading" />
      <Folder Include="Assets/Scripts/Loading/Installers" />
      <None Include="Assets/Scripts/Loading/Loading.asmdef" />

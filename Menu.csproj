@@ -41,11 +41,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets/Scripts/Menu/Services/Impl/MenuLoadLevelsService.cs" />
      <Compile Include="Assets/Scripts/Menu/Installers/MenuInstaller.cs" />
      <Compile Include="Assets/Scripts/Menu/Installers/MenuUiInstaller.cs" />
-     <Compile Include="Assets/Scripts/Menu/Ui/MenuScreen/MenuScreenView.cs" />
      <Compile Include="Assets/Scripts/Menu/Services/IMenuLoadLevelsService.cs" />
-     <Compile Include="Assets/Scripts/Menu/Services/Impl/MenuLoadLevelsService.cs" />
+     <Compile Include="Assets/Scripts/Menu/Ui/MenuScreen/MenuScreenView.cs" />
      <Folder Include="Assets/Scripts/Menu" />
      <None Include="Assets/Scripts/Menu/Menu.asmdef" />
      <Folder Include="Assets/Scripts/Menu/Ui/MenuScreen" />
