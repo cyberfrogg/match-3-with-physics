@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9118679895225695968}
   - component: {fileID: 6720469146520133580}
   m_Layer: 0
-  m_Name: TopCell
+  m_Name: cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -291,7 +291,7 @@ GameObject:
   - component: {fileID: 7408276804890429630}
   - component: {fileID: 8405933235856297006}
   m_Layer: 0
-  m_Name: TopCell
+  m_Name: cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 4224837597936076074}
   - component: {fileID: 9205072363482651971}
   m_Layer: 0
-  m_Name: TopCell
+  m_Name: cell
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -734,6 +734,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbbc721571fd4593b09ce6897fe2d92d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cells:
+  - {fileID: 9118679895225695968}
+  - {fileID: 4224837597936076074}
+  - {fileID: 7408276804890429630}
 --- !u!1 &6439133528231278761
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,4 +1,5 @@
 using Game.Data;
+using Game.Services.BallsRowMatch;
 using Game.Settings.Ball;
 using Game.Views.Ball;
 using UnityEngine;
@@ -9,6 +10,7 @@ namespace Game.Presenters.Ball.Impl
     public class BallPresenter : IBallPresenter
     {
         [Inject] private readonly IBallParameters _ballParameters;
+        [Inject] private readonly IBallsRowMatchService _ballsRowMatchService;
 
         public BallPresenter(
             IBallView view,
@@ -20,12 +22,27 @@ namespace Game.Presenters.Ball.Impl
         }
         
         public IBallView View { get; }
+        public Vector3 Position => View.Transform.position;
         public EBallType Type { get; }
 
         public void OnInject()
         {
             var color = _ballParameters.GetColorByType(Type);
             View.SetColor(color);
+
+            View.OnCollisionEnterEvent += OnCollisionEnterEvent;
+
+            View.OnDestroyEvent += OnDestroy;
+        }
+
+        private void OnCollisionEnterEvent()
+        {
+            _ballsRowMatchService.Check();
+        }
+
+        private void OnDestroy()
+        {
+            View.OnDestroyEvent -= OnDestroy;
         }
 
         public bool IsKinematic
@@ -37,6 +54,11 @@ namespace Game.Presenters.Ball.Impl
         public void ResetLocalPosition()
         {
             View.Transform.localPosition = Vector3.zero;
+        }
+
+        public void Destroy()
+        {
+            View.DestroyView();
         }
     }
 }

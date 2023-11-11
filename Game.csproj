@@ -78,8 +78,11 @@
      <Compile Include="Assets/Scripts/Game/Data/EBallType.cs" />
      <Compile Include="Assets/Scripts/Game/Settings/Ball/IBallParameters.cs" />
      <Compile Include="Assets/Scripts/Game/Data/BallColorByBallTypeItem.cs" />
+     <Compile Include="Assets/Scripts/Game/Services/BallsRowMatch/Impl/BallsRowMatchService.cs" />
+     <Compile Include="Assets/Scripts/Game/Services/BallsRowMatch/IBallsRowMatchService.cs" />
      <Folder Include="Assets/Scripts/Game/Services/InputService" />
      <Folder Include="Assets/Scripts/Game/Views/Ball/Impl" />
+     <Folder Include="Assets/Scripts/Game/Services/BallsRowMatch/Impl" />
      <Folder Include="Assets/Scripts/Game/Factories/Column" />
      <Folder Include="Assets/Scripts/Game/Services/PendulumAttach/Impl" />
      <Folder Include="Assets/Scripts/Game/Views/Column/Impl" />
@@ -114,6 +117,7 @@
      <Folder Include="Assets/Scripts/Game/Settings/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Installers" />
      <Folder Include="Assets/Scripts/Game/Views/Pendulum/Impl" />
+     <Folder Include="Assets/Scripts/Game/Services/BallsRowMatch" />
      <Folder Include="Assets/Scripts/Game/Providers" />
      <Folder Include="Assets/Scripts/Game" />
      <Folder Include="Assets/Scripts/Game/Services/InputService/Impl" />

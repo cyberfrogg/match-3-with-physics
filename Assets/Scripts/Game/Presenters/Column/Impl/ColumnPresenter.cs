@@ -1,7 +1,9 @@
+using System.Collections.Generic;
 using Game.Views.Column;
 using ProtoYeet.Core.Bootstrap.Services.GameLoop;
 using ProtoYeet.Core.Log.Services;
 using ProtoYeet.Core.Systems;
+using UnityEngine;
 using Zenject;
 
 namespace Game.Presenters.Column.Impl
@@ -36,5 +38,7 @@ namespace Game.Presenters.Column.Impl
             View.OnDestroyEvent -= OnDestroyEvent;
             _gameLoopManager.RemoveUpdateListener(this);
         }
+
+        public List<Vector3> Cells => View.Cells;
     }
 }
