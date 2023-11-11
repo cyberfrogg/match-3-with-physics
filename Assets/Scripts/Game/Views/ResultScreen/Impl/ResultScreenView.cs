@@ -16,7 +16,7 @@ namespace Game.Views.ResultScreen.Impl
 
         public void SetScore(int score)
         {
-            _score.text = $"{_score}";
+            _score.text = $"{score}";
         }
     }
 }

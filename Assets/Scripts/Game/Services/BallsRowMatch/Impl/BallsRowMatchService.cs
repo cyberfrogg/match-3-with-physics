@@ -3,6 +3,7 @@ using System.Linq;
 using Game.Factories.BallDestroyParticles;
 using Game.Presenters.Ball;
 using Game.Presenters.Column;
+using Game.Presenters.ResultScreen;
 using Game.Services.Score;
 using ProtoYeet.Core.Services.PresentersPool;
 using UnityEngine;
@@ -31,6 +32,8 @@ namespace Game.Services.BallsRowMatch.Impl
             CheckDiagonalMatch();
             CheckHorizontalMatch();
             CheckVerticalMatch();
+
+            CheckFailState();
         }
 
         private void CheckHorizontalMatch()
@@ -178,6 +181,32 @@ namespace Game.Services.BallsRowMatch.Impl
             }
         }
 
+        private void CheckFailState()
+        {
+            var balls = _presentersPool.GetPresenters<IBallPresenter>();
+            var columns = _presentersPool.GetPresenters<IColumnPresenter>();
+
+            var cells = new List<Vector3>();
+            var matchedBallsCount = 0;
+            foreach (var column in columns)
+            {
+                foreach (var cell in column.Cells)
+                {
+                    cells.Add(cell);
+
+                    var ball = GetBallOnPosition(balls, cell);
+                    if (ball != null)
+                    {
+                        matchedBallsCount++;
+                    }
+                }
+            }
+
+            if (matchedBallsCount >= cells.Count)
+            {
+                Fail();
+            }
+        }
         
         private IBallPresenter GetBallOnPosition(List<IBallPresenter> balls, Vector3 origin)
         {
@@ -200,6 +229,12 @@ namespace Game.Services.BallsRowMatch.Impl
             _scoreService.AddScoreForBall(ball.Type);
             
             ball.Destroy();
+        }
+
+        private void Fail()
+        {
+            var resultScreen = _presentersPool.GetPresenter<IResultScreenPresenter>();
+            resultScreen.Show();
         }
     }
 }
