@@ -72,6 +72,8 @@
      <Compile Include="Assets/Scripts/Game/Views/Input/Impl/InputView.cs" />
      <Compile Include="Assets/Scripts/Game/Services/InputService/Impl/InputService.cs" />
      <Compile Include="Assets/Scripts/Game/Systems/DetachOnTapSystem.cs" />
+     <Compile Include="Assets/Scripts/Game/Settings/Pendulum/IPendulumParameters.cs" />
+     <Compile Include="Assets/Scripts/Game/Settings/Pendulum/Impl/PendulumParameters.cs" />
      <Folder Include="Assets/Scripts/Game/Services/InputService" />
      <Folder Include="Assets/Scripts/Game/Views/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Factories/Column" />
@@ -90,6 +92,7 @@
      <Folder Include="Assets/Scripts/Game/Presenters/Pendulum/Impl" />
      <Folder Include="Assets/Scripts/Game/Views/Input" />
      <Folder Include="Assets/Scripts/Game/Services" />
+     <Folder Include="Assets/Scripts/Game/Settings/Pendulum" />
      <Folder Include="Assets/Scripts/Game/Views" />
      <Folder Include="Assets/Scripts/Game/Factories/Column/Impl" />
      <Folder Include="Assets/Scripts/Game/Presenters/Pendulum" />
@@ -102,12 +105,14 @@
      <Folder Include="Assets/Scripts/Game/Systems" />
      <Folder Include="Assets/Scripts/Game/Factories/Pendulum" />
      <Folder Include="Assets/Scripts/Game/Providers/GameFieldProvider" />
+     <Folder Include="Assets/Scripts/Game/Settings/Pendulum/Impl" />
      <Folder Include="Assets/Scripts/Game/Installers" />
      <Folder Include="Assets/Scripts/Game/Views/Pendulum/Impl" />
      <Folder Include="Assets/Scripts/Game/Providers" />
      <Folder Include="Assets/Scripts/Game" />
      <Folder Include="Assets/Scripts/Game/Services/InputService/Impl" />
      <Folder Include="Assets/Scripts/Game/Presenters" />
+     <Folder Include="Assets/Scripts/Game/Settings" />
      <Reference Include="UnityEngine">
      <HintPath>/var/home/cyberfrogg/.distrobox/dev-unity/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

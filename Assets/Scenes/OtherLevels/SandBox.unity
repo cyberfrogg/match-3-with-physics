@@ -490,6 +490,7 @@ MonoBehaviour:
   _monoInstallers:
   - {fileID: 1017343622}
   - {fileID: 1017343624}
+  - {fileID: 1017343625}
   _installerPrefabs: []
   _autoRun: 1
   OnPreInstall:
@@ -531,6 +532,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb582b23def74b40969148912d727dad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pendulumParameters: {fileID: 11400000, guid: ef8f73d9d946551eabc1c1f29fa5029f, type: 2}
 --- !u!1 &1190662113
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,13 +1,17 @@
 using Game.Presenters.Ball;
+using Game.Settings.Pendulum;
 using Game.Views.Pendulum;
 using UnityEngine;
+using Zenject;
 
 namespace Game.Presenters.Pendulum.Impl
 {
     public class PendulumPresenter : IPendulumPresenter
     {
+        [Inject] private readonly IPendulumParameters _pendulumParameters;
         public IPendulumView View { get; }
-
+        
+        
         public PendulumPresenter(
             IPendulumView view
             )
@@ -50,7 +54,7 @@ namespace Game.Presenters.Pendulum.Impl
         private void OnUpdate()
         {
             var time = Time.time;
-            var rotateValue = Mathf.Sin(time * View.RotateAnimationSpeed) * View.PendulumRotationAmplitude;
+            var rotateValue = Mathf.Sin(time * _pendulumParameters.RotationSpeed) * _pendulumParameters.RotationAmplitude;
 
             View.PendulumRotation = rotateValue;
         }
