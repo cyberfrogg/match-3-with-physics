@@ -1,6 +1,7 @@
 using Game.Factories.Ball;
 using Game.Factories.Column;
 using Game.Factories.Pendulum;
+using Game.Factories.ResultScreen;
 using Game.Providers.GameFieldProvider;
 using Game.Services.PendulumAttach;
 using ProtoYeet.Core.Log.Services;
@@ -18,6 +19,7 @@ namespace Game.Systems
         private readonly IBallFactory _ballFactory;
         private readonly IPendulumFactory _pendulumFactory;
         private readonly IPendulumAttachService _pendulumAttachService;
+        private readonly IResultScreenFactory _resultScreenFactory;
 
         public InitializeGameSystem(
             IGameFieldProvider gameFieldProvider,
@@ -26,7 +28,8 @@ namespace Game.Systems
             IColumnFactory columnFactory,
             IBallFactory ballFactory,
             IPendulumFactory pendulumFactory,
-            IPendulumAttachService pendulumAttachService
+            IPendulumAttachService pendulumAttachService,
+            IResultScreenFactory resultScreenFactory
             )
         {
             _gameFieldProvider = gameFieldProvider;
@@ -36,6 +39,7 @@ namespace Game.Systems
             _ballFactory = ballFactory;
             _pendulumFactory = pendulumFactory;
             _pendulumAttachService = pendulumAttachService;
+            _resultScreenFactory = resultScreenFactory;
         }
 
         public void Initialize()
@@ -45,6 +49,7 @@ namespace Game.Systems
             CreateColumns();
             CreatePendulum();
             CreateBall();
+            CreateResultScreen();
         }
 
         private void CreateColumns()
@@ -64,6 +69,11 @@ namespace Game.Systems
         {
             var ball = _ballFactory.Create();
             _pendulumAttachService.Attach(ball);
+        }
+        
+        private void CreateResultScreen()
+        {
+            _resultScreenFactory.Create(_gameFieldProvider.GameFieldView.ResultScreenView);
         }
     }
 }

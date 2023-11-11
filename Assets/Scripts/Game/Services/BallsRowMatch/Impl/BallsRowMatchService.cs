@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
-using Game.Factories.BallDestroyParticlesFactory;
+using Game.Factories.BallDestroyParticles;
 using Game.Presenters.Ball;
 using Game.Presenters.Column;
 using Game.Services.Score;

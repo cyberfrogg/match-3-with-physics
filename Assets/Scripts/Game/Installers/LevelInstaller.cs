@@ -1,12 +1,14 @@
 using Game.Data;
 using Game.Factories.Ball;
 using Game.Factories.Ball.Impl;
-using Game.Factories.BallDestroyParticlesFactory;
-using Game.Factories.BallDestroyParticlesFactory.Impl;
+using Game.Factories.BallDestroyParticles;
+using Game.Factories.BallDestroyParticles.Impl;
 using Game.Factories.Column;
 using Game.Factories.Column.Impl;
 using Game.Factories.Pendulum;
 using Game.Factories.Pendulum.Impl;
+using Game.Factories.ResultScreen;
+using Game.Factories.ResultScreen.Impl;
 using Game.Providers.GameFieldProvider;
 using Game.Providers.GameFieldProvider.Impl;
 using Game.Services.BallsRowMatch.Impl;
@@ -46,6 +48,7 @@ namespace Game.Installers
             Container.Bind<IBallFactory>().To<BallFactory>().AsSingle();
             Container.Bind<IPendulumFactory>().To<PendulumFactory>().AsSingle();
             Container.Bind<IBallDestroyParticlesFactory>().To<BallDestroyParticlesFactory>().AsSingle();
+            Container.Bind<IResultScreenFactory>().To<ResultScreenViewFactory>().AsSingle();
         }
         
         private void BindGameField()

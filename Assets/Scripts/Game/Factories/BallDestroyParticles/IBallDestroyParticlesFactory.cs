@@ -1,6 +1,6 @@
 using Game.Presenters.BallDestroyParticles;
 
-namespace Game.Factories.BallDestroyParticlesFactory
+namespace Game.Factories.BallDestroyParticles
 {
     public interface IBallDestroyParticlesFactory
     {

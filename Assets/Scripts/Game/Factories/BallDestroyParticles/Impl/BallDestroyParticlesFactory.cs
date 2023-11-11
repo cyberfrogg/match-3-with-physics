@@ -6,7 +6,7 @@ using ProtoYeet.Core.Services.PrefabSpawn;
 using ProtoYeet.Core.Services.PresentersPool;
 using Zenject;
 
-namespace Game.Factories.BallDestroyParticlesFactory.Impl
+namespace Game.Factories.BallDestroyParticles.Impl
 {
     public class BallDestroyParticlesFactory : IBallDestroyParticlesFactory
     {
