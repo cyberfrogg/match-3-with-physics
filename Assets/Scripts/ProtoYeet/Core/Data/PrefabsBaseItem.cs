@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-namespace Game.Data
+namespace ProtoYeet.Core.Data
 {
     [Serializable]
     public struct PrefabsBaseItem

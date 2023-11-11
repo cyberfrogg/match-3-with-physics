@@ -5,6 +5,8 @@ namespace ProtoYeet.Abstracts
 {
     public abstract class MonoView : MonoBehaviour, IView
     {
+        public Transform Transform => transform;
+        
         public event Action OnDestroyEvent;
 
         protected void InternalInvokeOnDestroy()

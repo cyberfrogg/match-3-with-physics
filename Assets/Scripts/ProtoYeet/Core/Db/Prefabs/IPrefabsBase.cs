@@ -1,6 +1,6 @@
-using Game.Data;
+using ProtoYeet.Core.Data;
 
-namespace Game.Db.Prefabs
+namespace ProtoYeet.Core.Db.Prefabs
 {
     public interface IPrefabsBase
     {

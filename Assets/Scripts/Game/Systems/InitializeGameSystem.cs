@@ -1,5 +1,8 @@
+using Game.Factories.Ball;
 using Game.Factories.Column;
+using Game.Factories.Pendulum;
 using Game.Providers.GameFieldProvider;
+using Game.Services.PendulumAttach;
 using ProtoYeet.Core.Log.Services;
 using ProtoYeet.Core.Systems;
 using Zenject;
@@ -12,18 +15,27 @@ namespace Game.Systems
         private readonly ILoggerService _loggerService;
         private readonly DiContainer _container;
         private readonly IColumnFactory _columnFactory;
+        private readonly IBallFactory _ballFactory;
+        private readonly IPendulumFactory _pendulumFactory;
+        private readonly IPendulumAttachService _pendulumAttachService;
 
         public InitializeGameSystem(
             IGameFieldProvider gameFieldProvider,
             ILoggerService loggerService,
             DiContainer container,
-            IColumnFactory columnFactory
+            IColumnFactory columnFactory,
+            IBallFactory ballFactory,
+            IPendulumFactory pendulumFactory,
+            IPendulumAttachService pendulumAttachService
             )
         {
             _gameFieldProvider = gameFieldProvider;
             _loggerService = loggerService;
             _container = container;
             _columnFactory = columnFactory;
+            _ballFactory = ballFactory;
+            _pendulumFactory = pendulumFactory;
+            _pendulumAttachService = pendulumAttachService;
         }
 
         public void Initialize()
@@ -31,7 +43,8 @@ namespace Game.Systems
             _loggerService.Log(this, "Initialize Game");
             
             CreateColumns();
-            CreateCamera();
+            CreatePendulum();
+            CreateBall();
         }
 
         private void CreateColumns()
@@ -42,9 +55,15 @@ namespace Game.Systems
             }
         }
 
-        private void CreateCamera()
+        private void CreatePendulum()
         {
-            
+            _pendulumFactory.Create(_gameFieldProvider.GameFieldView.PendulumView);
+        }
+
+        private void CreateBall()
+        {
+            var ball = _ballFactory.Create();
+            _pendulumAttachService.Attach(ball);
         }
     }
 }

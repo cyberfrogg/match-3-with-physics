@@ -1,9 +1,9 @@
 using System;
 using System.Collections.Generic;
-using Game.Data;
+using ProtoYeet.Core.Data;
 using UnityEngine;
 
-namespace Game.Db.Prefabs.Impl
+namespace ProtoYeet.Core.Db.Prefabs.Impl
 {
     [CreateAssetMenu(menuName = "Settings/" + nameof(PrefabsBase), fileName = nameof(PrefabsBase))]
     public class PrefabsBase : ScriptableObject, IPrefabsBase
