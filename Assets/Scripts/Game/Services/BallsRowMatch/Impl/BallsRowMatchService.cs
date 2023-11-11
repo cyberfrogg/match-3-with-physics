@@ -101,27 +101,77 @@ namespace Game.Services.BallsRowMatch.Impl
         
         private void CheckDiagonalMatch()
         {
-            
-        }
+            var balls = _presentersPool.GetPresenters<IBallPresenter>();
+            var columns = _presentersPool.GetPresenters<IColumnPresenter>();
 
-        private List<List<Vector3>> ColumnsToRows(List<IColumnPresenter> columns)
-        {
-            var rowsCount = columns[0].Cells.Count;
-            var rows = new List<List<Vector3>>();
-            
-            for (var i = 0; i < columns.Count; i++)
+            var numRows = columns[0].Cells.Count;
+
+            for (var startColumn = 0; startColumn < columns.Count; startColumn++)
             {
-                var row = new List<Vector3>();
-                for (var j = 0; j < rowsCount; j++)
+                var ballsInDiagonal = new List<IBallPresenter>();
+
+                for (var i = 0; i < columns.Count && (startColumn + i) < columns.Count; i++)
                 {
-                    row.Add(columns[i].Cells[j]);
+                    var columnIndex = startColumn + i;
+                    var cell = columns[columnIndex].Cells[i];
+
+                    var ball = GetBallOnPosition(balls, cell);
+
+                    if (ball != null)
+                    {
+                        ballsInDiagonal.Add(ball);
+                    }
+                    else
+                    {
+                        ballsInDiagonal.Clear();
+                    }
                 }
-                
-                rows.Add(row);
+
+                ProcessDiagonalMatch(ballsInDiagonal, columns);
             }
 
-            return rows;
+            for (var startColumn = columns.Count - 1; startColumn >= 0; startColumn--)
+            {
+                var ballsInDiagonal = new List<IBallPresenter>();
+
+                for (var i = 0; i < columns.Count && (startColumn - i) >= 0; i++)
+                {
+                    var columnIndex = startColumn - i;
+                    var cell = columns[columnIndex].Cells[i];
+
+                    var ball = GetBallOnPosition(balls, cell);
+
+                    if (ball != null)
+                    {
+                        ballsInDiagonal.Add(ball);
+                    }
+                    else
+                    {
+                        ballsInDiagonal.Clear();
+                    }
+                }
+
+                ProcessDiagonalMatch(ballsInDiagonal, columns);
+            }
         }
+
+        private void ProcessDiagonalMatch(List<IBallPresenter> ballsInDiagonal, List<IColumnPresenter> columns)
+        {
+            if (ballsInDiagonal.Count == columns.Count)
+            {
+                var type = ballsInDiagonal.First().Type;
+                var isSameTypeAll = ballsInDiagonal.All(x => x.Type == type);
+
+                if (isSameTypeAll)
+                {
+                    foreach (var ball in ballsInDiagonal)
+                    {
+                        DestroyBall(ball);
+                    }
+                }
+            }
+        }
+
         
         private IBallPresenter GetBallOnPosition(List<IBallPresenter> balls, Vector3 origin)
         {
