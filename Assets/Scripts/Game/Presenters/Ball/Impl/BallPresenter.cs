@@ -1,22 +1,31 @@
+using Game.Data;
+using Game.Settings.Ball;
 using Game.Views.Ball;
 using UnityEngine;
+using Zenject;
 
 namespace Game.Presenters.Ball.Impl
 {
     public class BallPresenter : IBallPresenter
     {
-        public IBallView View { get; }
+        [Inject] private readonly IBallParameters _ballParameters;
 
         public BallPresenter(
-            IBallView view
+            IBallView view,
+            EBallType ballType
             )
         {
+            Type = ballType;
             View = view;
         }
+        
+        public IBallView View { get; }
+        public EBallType Type { get; }
 
         public void OnInject()
         {
-            
+            var color = _ballParameters.GetColorByType(Type);
+            View.SetColor(color);
         }
 
         public bool IsKinematic

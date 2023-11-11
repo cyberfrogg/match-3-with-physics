@@ -74,6 +74,10 @@
      <Compile Include="Assets/Scripts/Game/Systems/DetachOnTapSystem.cs" />
      <Compile Include="Assets/Scripts/Game/Settings/Pendulum/IPendulumParameters.cs" />
      <Compile Include="Assets/Scripts/Game/Settings/Pendulum/Impl/PendulumParameters.cs" />
+     <Compile Include="Assets/Scripts/Game/Settings/Ball/Impl/BallParameters.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/EBallType.cs" />
+     <Compile Include="Assets/Scripts/Game/Settings/Ball/IBallParameters.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/BallColorByBallTypeItem.cs" />
      <Folder Include="Assets/Scripts/Game/Services/InputService" />
      <Folder Include="Assets/Scripts/Game/Views/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Factories/Column" />
@@ -101,11 +105,13 @@
      <Folder Include="Assets/Scripts/Game/Views/Pendulum" />
      <Folder Include="Assets/Scripts/Game/Data" />
      <Folder Include="Assets/Scripts/Game/Views/Ball" />
+     <Folder Include="Assets/Scripts/Game/Settings/Ball" />
      <Folder Include="Assets/Scripts/Game/Factories/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Systems" />
      <Folder Include="Assets/Scripts/Game/Factories/Pendulum" />
      <Folder Include="Assets/Scripts/Game/Providers/GameFieldProvider" />
      <Folder Include="Assets/Scripts/Game/Settings/Pendulum/Impl" />
+     <Folder Include="Assets/Scripts/Game/Settings/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Installers" />
      <Folder Include="Assets/Scripts/Game/Views/Pendulum/Impl" />
      <Folder Include="Assets/Scripts/Game/Providers" />

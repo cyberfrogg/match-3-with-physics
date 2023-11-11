@@ -533,6 +533,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pendulumParameters: {fileID: 11400000, guid: ef8f73d9d946551eabc1c1f29fa5029f, type: 2}
+  ballParameters: {fileID: 11400000, guid: 61aa2917b10e4dba0aaa5e80732de6b3, type: 2}
 --- !u!1 &1190662113
 GameObject:
   m_ObjectHideFlags: 0
