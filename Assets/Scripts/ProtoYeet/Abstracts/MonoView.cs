@@ -5,6 +5,7 @@ namespace ProtoYeet.Abstracts
 {
     public abstract class MonoView : MonoBehaviour, IView
     {
+        public bool IsDestroyed { get; private set; }
         public event Action UpdateEvent;
         
         public Transform Transform => transform;
@@ -18,6 +19,7 @@ namespace ProtoYeet.Abstracts
 
         private void OnDestroy()
         {
+            IsDestroyed = true;
             InternalInvokeOnDestroy();
         }
 

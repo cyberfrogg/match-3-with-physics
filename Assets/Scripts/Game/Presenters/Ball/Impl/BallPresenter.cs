@@ -2,6 +2,7 @@ using Game.Data;
 using Game.Services.BallsRowMatch;
 using Game.Settings.Ball;
 using Game.Views.Ball;
+using ProtoYeet.Core.Services.PresentersPool;
 using UnityEngine;
 using Zenject;
 
@@ -11,6 +12,7 @@ namespace Game.Presenters.Ball.Impl
     {
         [Inject] private readonly IBallParameters _ballParameters;
         [Inject] private readonly IBallsRowMatchService _ballsRowMatchService;
+        [Inject] private readonly IPresentersPool _presentersPool;
 
         public BallPresenter(
             IBallView view,
@@ -42,6 +44,7 @@ namespace Game.Presenters.Ball.Impl
 
         private void OnDestroy()
         {
+            _presentersPool.Remove(this);
             View.OnDestroyEvent -= OnDestroy;
         }
 

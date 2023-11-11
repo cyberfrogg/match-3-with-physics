@@ -28,8 +28,40 @@ namespace Game.Services.BallsRowMatch.Impl
         }
 
         private void CheckHorizontalMatch()
-        {   
-            
+        {
+            var balls = _presentersPool.GetPresenters<IBallPresenter>();
+            var columns = _presentersPool.GetPresenters<IColumnPresenter>();
+
+            foreach (var columnIndex in Enumerable.Range(0, columns[0].Cells.Count)) // Assuming all columns have the same number of cells
+            {
+                var ballsInRow = new List<IBallPresenter>();
+
+                foreach (var column in columns)
+                {
+                    var cell = column.Cells[columnIndex];
+                    var ball = GetBallOnPosition(balls, cell);
+
+                    if (ball != null)
+                    {
+                        ballsInRow.Add(ball);
+                    }
+                }
+
+                if (ballsInRow.Count == columns.Count)
+                {
+                    var type = ballsInRow.First().Type;
+                    var isSameTypeAll = ballsInRow.All(x => x.Type == type);
+
+                    if (isSameTypeAll)
+                    {
+                        foreach (var ball in ballsInRow)
+                        {
+                            DestroyBall(ball);
+                        }
+                        return; // Assuming you want to stop after destroying the first matching row
+                    }
+                }
+            }
         }
         
         private void CheckVerticalMatch()
@@ -72,6 +104,25 @@ namespace Game.Services.BallsRowMatch.Impl
             
         }
 
+        private List<List<Vector3>> ColumnsToRows(List<IColumnPresenter> columns)
+        {
+            var rowsCount = columns[0].Cells.Count;
+            var rows = new List<List<Vector3>>();
+            
+            for (var i = 0; i < columns.Count; i++)
+            {
+                var row = new List<Vector3>();
+                for (var j = 0; j < rowsCount; j++)
+                {
+                    row.Add(columns[i].Cells[j]);
+                }
+                
+                rows.Add(row);
+            }
+
+            return rows;
+        }
+        
         private IBallPresenter GetBallOnPosition(List<IBallPresenter> balls, Vector3 origin)
         {
             foreach (var ball in balls)
@@ -85,7 +136,6 @@ namespace Game.Services.BallsRowMatch.Impl
 
             return null;
         }
-
         private void DestroyBall(IBallPresenter ball)
         {
             ball.Destroy();
