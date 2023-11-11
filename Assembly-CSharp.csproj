@@ -43,7 +43,6 @@
   <ItemGroup>
      <Folder Include="Assets" />
      <Folder Include="Assets/Scripts" />
-     <Folder Include="Assets/Scenes/OtherLevels/SandBox" />
      <Folder Include="Assets/Prefabs/Entities" />
      <Folder Include="Assets/Resources" />
      <Folder Include="Assets/Config/Db" />
@@ -57,7 +56,6 @@
      <Folder Include="Assets/Assets/Essentials/Skybox" />
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/Scenes" />
-     <Folder Include="Assets/Assets/Match-3-With-Physics" />
      <Folder Include="Assets/Assets/Essentials/Prototype/White" />
      <Reference Include="UnityEngine">
      <HintPath>/var/home/cyberfrogg/.distrobox/dev-unity/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

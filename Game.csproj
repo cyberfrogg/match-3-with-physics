@@ -67,6 +67,12 @@
      <Compile Include="Assets/Scripts/Game/Factories/Pendulum/Impl/PendulumFactory.cs" />
      <Compile Include="Assets/Scripts/Game/Services/PendulumAttach/IPendulumAttachService.cs" />
      <Compile Include="Assets/Scripts/Game/Services/PendulumAttach/Impl/PendulumAttachService.cs" />
+     <Compile Include="Assets/Scripts/Game/Views/Input/IInputView.cs" />
+     <Compile Include="Assets/Scripts/Game/Services/InputService/IInputService.cs" />
+     <Compile Include="Assets/Scripts/Game/Views/Input/Impl/InputView.cs" />
+     <Compile Include="Assets/Scripts/Game/Services/InputService/Impl/InputService.cs" />
+     <Compile Include="Assets/Scripts/Game/Systems/DetachOnTapSystem.cs" />
+     <Folder Include="Assets/Scripts/Game/Services/InputService" />
      <Folder Include="Assets/Scripts/Game/Views/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Factories/Column" />
      <Folder Include="Assets/Scripts/Game/Services/PendulumAttach/Impl" />
@@ -82,10 +88,12 @@
      <Folder Include="Assets/Scripts/Game/Services/PendulumAttach" />
      <Folder Include="Assets/Scripts/Game/Factories/Ball" />
      <Folder Include="Assets/Scripts/Game/Presenters/Pendulum/Impl" />
+     <Folder Include="Assets/Scripts/Game/Views/Input" />
      <Folder Include="Assets/Scripts/Game/Services" />
      <Folder Include="Assets/Scripts/Game/Views" />
      <Folder Include="Assets/Scripts/Game/Factories/Column/Impl" />
      <Folder Include="Assets/Scripts/Game/Presenters/Pendulum" />
+     <Folder Include="Assets/Scripts/Game/Views/Input/Impl" />
      <Folder Include="Assets/Scripts/Game/Presenters/Column/Impl" />
      <Folder Include="Assets/Scripts/Game/Views/Pendulum" />
      <Folder Include="Assets/Scripts/Game/Data" />
@@ -98,6 +106,7 @@
      <Folder Include="Assets/Scripts/Game/Views/Pendulum/Impl" />
      <Folder Include="Assets/Scripts/Game/Providers" />
      <Folder Include="Assets/Scripts/Game" />
+     <Folder Include="Assets/Scripts/Game/Services/InputService/Impl" />
      <Folder Include="Assets/Scripts/Game/Presenters" />
      <Reference Include="UnityEngine">
      <HintPath>/var/home/cyberfrogg/.distrobox/dev-unity/Unity/Hub/Editor/2021.3.23f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

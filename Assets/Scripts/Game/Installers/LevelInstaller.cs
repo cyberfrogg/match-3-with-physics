@@ -7,6 +7,7 @@ using Game.Factories.Pendulum;
 using Game.Factories.Pendulum.Impl;
 using Game.Providers.GameFieldProvider;
 using Game.Providers.GameFieldProvider.Impl;
+using Game.Services.InputService.Impl;
 using Game.Services.PendulumAttach.Impl;
 using Game.Systems;
 using UnityEngine;
@@ -30,6 +31,7 @@ namespace Game.Installers
         private void BindServices()
         {
             Container.BindInterfacesAndSelfTo<PendulumAttachService>().AsSingle();
+            Container.BindInterfacesAndSelfTo<InputService>().AsSingle();
         }
         
         private void BindFactories()
@@ -52,6 +54,7 @@ namespace Game.Installers
         private void BindSystems()
         {
             Container.BindInterfacesAndSelfTo<InitializeGameSystem>().AsSingle();
+            Container.BindInterfacesAndSelfTo<DetachOnTapSystem>().AsSingle();
         }
     }
 }
