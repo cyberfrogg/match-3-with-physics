@@ -1,17 +1,14 @@
 using System.Collections.Generic;
 using Game.Views.Column;
-using ProtoYeet.Core.Bootstrap.Services.GameLoop;
-using ProtoYeet.Core.Log.Services;
-using ProtoYeet.Core.Systems;
+using ProtoYeet.Core.Services.PresentersPool;
 using UnityEngine;
 using Zenject;
 
 namespace Game.Presenters.Column.Impl
 {
-    public class ColumnPresenter : IColumnPresenter, IUpdateSystem
+    public class ColumnPresenter : IColumnPresenter
     {
-        [Inject] private readonly ILoggerService _loggerService;
-        [Inject] private readonly IGameLoopManager _gameLoopManager;
+        [Inject] private readonly IPresentersPool _presentersPool;
         
         public IColumnView View { get; }
         
@@ -22,21 +19,16 @@ namespace Game.Presenters.Column.Impl
             View = columnView;
         }
 
-        public void Update()
-        {
-            
-        }
-
         public void OnInject()
         {
-            _gameLoopManager.AddUpdateListener(this);
-            View.OnDestroyEvent += OnDestroyEvent;
+            View.OnDestroyEvent += OnDestroy;
         }
 
-        private void OnDestroyEvent()
+        private void OnDestroy()
         {
-            View.OnDestroyEvent -= OnDestroyEvent;
-            _gameLoopManager.RemoveUpdateListener(this);
+            View.OnDestroyEvent -= OnDestroy;
+            
+            _presentersPool.Remove(this);
         }
 
         public List<Vector3> Cells => View.Cells;

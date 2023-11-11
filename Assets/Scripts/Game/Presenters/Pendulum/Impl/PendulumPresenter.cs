@@ -1,6 +1,7 @@
 using Game.Presenters.Ball;
 using Game.Settings.Pendulum;
 using Game.Views.Pendulum;
+using ProtoYeet.Core.Services.PresentersPool;
 using UnityEngine;
 using Zenject;
 
@@ -9,6 +10,8 @@ namespace Game.Presenters.Pendulum.Impl
     public class PendulumPresenter : IPendulumPresenter
     {
         [Inject] private readonly IPendulumParameters _pendulumParameters;
+        [Inject] private readonly IPresentersPool _presentersPool;
+        
         public IPendulumView View { get; }
         
         
@@ -27,6 +30,8 @@ namespace Game.Presenters.Pendulum.Impl
 
         private void OnDestroy()
         {
+            _presentersPool.Remove(this);
+            
             View.UpdateEvent -= OnUpdate;
             View.OnDestroyEvent -= OnDestroy;
         }
