@@ -15,7 +15,10 @@ MonoBehaviour:
   ballColorByBallTypeItems:
   - BallType: 0
     Color: {r: 1, g: 0.18396229, b: 0.18396229, a: 1}
+    Score: 10
   - BallType: 1
     Color: {r: 0.36897096, g: 1, b: 0.24056602, a: 1}
+    Score: 5
   - BallType: 2
     Color: {r: 0, g: 0.71108055, b: 1, a: 1}
+    Score: 1

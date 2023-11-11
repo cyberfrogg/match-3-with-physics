@@ -50,6 +50,7 @@
      <Folder Include="Assets/Assets" />
      <Folder Include="Assets/Assets/Essentials/Prototype/GlowWhite" />
      <Folder Include="Assets/Assets/Essentials/Prototype/Dark" />
+     <Folder Include="Assets/Prefabs/Entities/FX" />
      <Folder Include="Assets/Assets/Essentials/Prototype" />
      <Folder Include="Assets/Config/Settings" />
      <Folder Include="Assets/Scenes/OtherLevels" />

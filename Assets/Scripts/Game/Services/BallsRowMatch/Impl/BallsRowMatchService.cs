@@ -3,6 +3,7 @@ using System.Linq;
 using Game.Factories.BallDestroyParticlesFactory;
 using Game.Presenters.Ball;
 using Game.Presenters.Column;
+using Game.Services.Score;
 using ProtoYeet.Core.Services.PresentersPool;
 using UnityEngine;
 
@@ -12,14 +13,17 @@ namespace Game.Services.BallsRowMatch.Impl
     {
         private readonly IPresentersPool _presentersPool;
         private readonly IBallDestroyParticlesFactory _ballDestroyParticlesFactory;
+        private readonly IScoreService _scoreService;
 
         public BallsRowMatchService(
             IPresentersPool presentersPool,
-            IBallDestroyParticlesFactory ballDestroyParticlesFactory
+            IBallDestroyParticlesFactory ballDestroyParticlesFactory,
+            IScoreService scoreService
             )
         {
             _presentersPool = presentersPool;
             _ballDestroyParticlesFactory = ballDestroyParticlesFactory;
+            _scoreService = scoreService;
         }
 
         public void Check()
@@ -192,6 +196,8 @@ namespace Game.Services.BallsRowMatch.Impl
         {
             var destroyParticles = _ballDestroyParticlesFactory.Create();
             destroyParticles.Position = ball.Position;
+            
+            _scoreService.AddScoreForBall(ball.Type);
             
             ball.Destroy();
         }

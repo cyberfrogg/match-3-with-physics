@@ -12,6 +12,7 @@ using Game.Providers.GameFieldProvider.Impl;
 using Game.Services.BallsRowMatch.Impl;
 using Game.Services.InputService.Impl;
 using Game.Services.PendulumAttach.Impl;
+using Game.Services.Score.Impl;
 using Game.Systems;
 using UnityEngine;
 using Zenject;
@@ -36,6 +37,7 @@ namespace Game.Installers
             Container.BindInterfacesAndSelfTo<PendulumAttachService>().AsSingle();
             Container.BindInterfacesAndSelfTo<InputService>().AsSingle();
             Container.BindInterfacesAndSelfTo<BallsRowMatchService>().AsSingle();
+            Container.BindInterfacesAndSelfTo<ScoreService>().AsSingle();
         }
         
         private void BindFactories()

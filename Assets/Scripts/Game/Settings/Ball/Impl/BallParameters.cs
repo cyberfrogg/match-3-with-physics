@@ -8,15 +8,15 @@ namespace Game.Settings.Ball.Impl
     [CreateAssetMenu(menuName = "Settings/" + nameof(BallParameters), fileName = nameof(BallParameters))]
     public class BallParameters : ScriptableObject, IBallParameters
     {
-        [SerializeField] private List<BallColorByBallTypeItem> ballColorByBallTypeItems;
+        [SerializeField] private List<BallVo> ballColorByBallTypeItems;
         
-        public Color GetColorByType(EBallType type)
+        public BallVo GetBallVo(EBallType type)
         {
             foreach (var item in ballColorByBallTypeItems)
             {
                 if (item.BallType == type)
                 {
-                    return item.Color;
+                    return item;
                 }
             }
 

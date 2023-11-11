@@ -77,7 +77,7 @@
      <Compile Include="Assets/Scripts/Game/Settings/Ball/Impl/BallParameters.cs" />
      <Compile Include="Assets/Scripts/Game/Data/EBallType.cs" />
      <Compile Include="Assets/Scripts/Game/Settings/Ball/IBallParameters.cs" />
-     <Compile Include="Assets/Scripts/Game/Data/BallColorByBallTypeItem.cs" />
+     <Compile Include="Assets/Scripts/Game/Data/BallVo.cs" />
      <Compile Include="Assets/Scripts/Game/Services/BallsRowMatch/Impl/BallsRowMatchService.cs" />
      <Compile Include="Assets/Scripts/Game/Services/BallsRowMatch/IBallsRowMatchService.cs" />
      <Compile Include="Assets/Scripts/Game/Presenters/BallDestroyParticles/Impl/BallDestroyParticlesPresenter.cs" />
@@ -86,6 +86,8 @@
      <Compile Include="Assets/Scripts/Game/Views/BallDestroyParticles/Impl/BallDestroyParticlesView.cs" />
      <Compile Include="Assets/Scripts/Game/Factories/BallDestroyParticlesFactory/Impl/BallDestroyParticlesFactory.cs" />
      <Compile Include="Assets/Scripts/Game/Views/BallDestroyParticles/IBallDestroyParticlesView.cs" />
+     <Compile Include="Assets/Scripts/Game/Services/Score/IScoreService.cs" />
+     <Compile Include="Assets/Scripts/Game/Services/Score/Impl/ScoreService.cs" />
      <Folder Include="Assets/Scripts/Game/Services/InputService" />
      <Folder Include="Assets/Scripts/Game/Views/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Services/BallsRowMatch/Impl" />
@@ -128,10 +130,12 @@
      <Folder Include="Assets/Scripts/Game/Installers" />
      <Folder Include="Assets/Scripts/Game/Presenters/BallDestroyParticles/Impl" />
      <Folder Include="Assets/Scripts/Game/Views/Pendulum/Impl" />
+     <Folder Include="Assets/Scripts/Game/Services/Score" />
      <Folder Include="Assets/Scripts/Game/Services/BallsRowMatch" />
      <Folder Include="Assets/Scripts/Game/Factories/BallDestroyParticlesFactory" />
      <Folder Include="Assets/Scripts/Game/Providers" />
      <Folder Include="Assets/Scripts/Game" />
+     <Folder Include="Assets/Scripts/Game/Services/Score/Impl" />
      <Folder Include="Assets/Scripts/Game/Services/InputService/Impl" />
      <Folder Include="Assets/Scripts/Game/Presenters" />
      <Folder Include="Assets/Scripts/Game/Settings" />

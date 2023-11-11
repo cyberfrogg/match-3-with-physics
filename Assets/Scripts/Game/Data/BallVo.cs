@@ -4,9 +4,10 @@ using UnityEngine;
 namespace Game.Data
 {
     [Serializable]
-    public class BallColorByBallTypeItem
+    public struct BallVo
     {
         public EBallType BallType;
         public Color Color;
+        public int Score;
     }
 }

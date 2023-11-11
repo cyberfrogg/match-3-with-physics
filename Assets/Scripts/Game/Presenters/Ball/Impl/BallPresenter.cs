@@ -29,8 +29,8 @@ namespace Game.Presenters.Ball.Impl
 
         public void OnInject()
         {
-            var color = _ballParameters.GetColorByType(Type);
-            View.SetColor(color);
+            var ballVo = _ballParameters.GetBallVo(Type);
+            View.SetColor(ballVo.Color);
 
             View.OnCollisionEnterEvent += OnCollisionEnterEvent;
 
