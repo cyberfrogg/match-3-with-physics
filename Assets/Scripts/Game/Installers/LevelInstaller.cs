@@ -1,6 +1,8 @@
 using Game.Data;
 using Game.Factories.Ball;
 using Game.Factories.Ball.Impl;
+using Game.Factories.BallDestroyParticlesFactory;
+using Game.Factories.BallDestroyParticlesFactory.Impl;
 using Game.Factories.Column;
 using Game.Factories.Column.Impl;
 using Game.Factories.Pendulum;
@@ -41,6 +43,7 @@ namespace Game.Installers
             Container.Bind<IColumnFactory>().To<ColumnFactory>().AsSingle();
             Container.Bind<IBallFactory>().To<BallFactory>().AsSingle();
             Container.Bind<IPendulumFactory>().To<PendulumFactory>().AsSingle();
+            Container.Bind<IBallDestroyParticlesFactory>().To<BallDestroyParticlesFactory>().AsSingle();
         }
         
         private void BindGameField()

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Game.Factories.BallDestroyParticlesFactory;
 using Game.Presenters.Ball;
 using Game.Presenters.Column;
 using ProtoYeet.Core.Services.PresentersPool;
@@ -10,18 +11,19 @@ namespace Game.Services.BallsRowMatch.Impl
     public class BallsRowMatchService : IBallsRowMatchService
     {
         private readonly IPresentersPool _presentersPool;
+        private readonly IBallDestroyParticlesFactory _ballDestroyParticlesFactory;
 
         public BallsRowMatchService(
-            IPresentersPool presentersPool
+            IPresentersPool presentersPool,
+            IBallDestroyParticlesFactory ballDestroyParticlesFactory
             )
         {
             _presentersPool = presentersPool;
+            _ballDestroyParticlesFactory = ballDestroyParticlesFactory;
         }
 
         public void Check()
         {
-
-
             CheckDiagonalMatch();
             CheckHorizontalMatch();
             CheckVerticalMatch();
@@ -188,6 +190,9 @@ namespace Game.Services.BallsRowMatch.Impl
         }
         private void DestroyBall(IBallPresenter ball)
         {
+            var destroyParticles = _ballDestroyParticlesFactory.Create();
+            destroyParticles.Position = ball.Position;
+            
             ball.Destroy();
         }
     }

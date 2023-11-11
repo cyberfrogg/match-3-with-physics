@@ -80,6 +80,12 @@
      <Compile Include="Assets/Scripts/Game/Data/BallColorByBallTypeItem.cs" />
      <Compile Include="Assets/Scripts/Game/Services/BallsRowMatch/Impl/BallsRowMatchService.cs" />
      <Compile Include="Assets/Scripts/Game/Services/BallsRowMatch/IBallsRowMatchService.cs" />
+     <Compile Include="Assets/Scripts/Game/Presenters/BallDestroyParticles/Impl/BallDestroyParticlesPresenter.cs" />
+     <Compile Include="Assets/Scripts/Game/Factories/BallDestroyParticlesFactory/IBallDestroyParticlesFactory.cs" />
+     <Compile Include="Assets/Scripts/Game/Presenters/BallDestroyParticles/IBallDestroyParticlesPresenter.cs" />
+     <Compile Include="Assets/Scripts/Game/Views/BallDestroyParticles/Impl/BallDestroyParticlesView.cs" />
+     <Compile Include="Assets/Scripts/Game/Factories/BallDestroyParticlesFactory/Impl/BallDestroyParticlesFactory.cs" />
+     <Compile Include="Assets/Scripts/Game/Views/BallDestroyParticles/IBallDestroyParticlesView.cs" />
      <Folder Include="Assets/Scripts/Game/Services/InputService" />
      <Folder Include="Assets/Scripts/Game/Views/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Services/BallsRowMatch/Impl" />
@@ -94,9 +100,11 @@
      <Folder Include="Assets/Scripts/Game/Presenters/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Factories" />
      <Folder Include="Assets/Scripts/Game/Presenters/Column" />
+     <Folder Include="Assets/Scripts/Game/Views/BallDestroyParticles/Impl" />
      <Folder Include="Assets/Scripts/Game/Services/PendulumAttach" />
      <Folder Include="Assets/Scripts/Game/Factories/Ball" />
      <Folder Include="Assets/Scripts/Game/Presenters/Pendulum/Impl" />
+     <Folder Include="Assets/Scripts/Game/Factories/BallDestroyParticlesFactory/Impl" />
      <Folder Include="Assets/Scripts/Game/Views/Input" />
      <Folder Include="Assets/Scripts/Game/Services" />
      <Folder Include="Assets/Scripts/Game/Settings/Pendulum" />
@@ -106,6 +114,7 @@
      <Folder Include="Assets/Scripts/Game/Views/Input/Impl" />
      <Folder Include="Assets/Scripts/Game/Presenters/Column/Impl" />
      <Folder Include="Assets/Scripts/Game/Views/Pendulum" />
+     <Folder Include="Assets/Scripts/Game/Views/BallDestroyParticles" />
      <Folder Include="Assets/Scripts/Game/Data" />
      <Folder Include="Assets/Scripts/Game/Views/Ball" />
      <Folder Include="Assets/Scripts/Game/Settings/Ball" />
@@ -113,11 +122,14 @@
      <Folder Include="Assets/Scripts/Game/Systems" />
      <Folder Include="Assets/Scripts/Game/Factories/Pendulum" />
      <Folder Include="Assets/Scripts/Game/Providers/GameFieldProvider" />
+     <Folder Include="Assets/Scripts/Game/Presenters/BallDestroyParticles" />
      <Folder Include="Assets/Scripts/Game/Settings/Pendulum/Impl" />
      <Folder Include="Assets/Scripts/Game/Settings/Ball/Impl" />
      <Folder Include="Assets/Scripts/Game/Installers" />
+     <Folder Include="Assets/Scripts/Game/Presenters/BallDestroyParticles/Impl" />
      <Folder Include="Assets/Scripts/Game/Views/Pendulum/Impl" />
      <Folder Include="Assets/Scripts/Game/Services/BallsRowMatch" />
+     <Folder Include="Assets/Scripts/Game/Factories/BallDestroyParticlesFactory" />
      <Folder Include="Assets/Scripts/Game/Providers" />
      <Folder Include="Assets/Scripts/Game" />
      <Folder Include="Assets/Scripts/Game/Services/InputService/Impl" />
