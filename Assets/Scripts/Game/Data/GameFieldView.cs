@@ -1,12 +1,13 @@
-using Game.Views.Player.Impl;
+using System.Collections.Generic;
+using Game.Views.Column.Impl;
 using UnityEngine;
 
 namespace Game.Data
 {
     public class GameFieldView : MonoBehaviour
     {
-        [SerializeField] private PlayerView playerView;
+        [SerializeField] private List<ColumnView> columnViews;
 
-        public PlayerView PlayerView => playerView;
+        public List<ColumnView> ColumnViews => columnViews;
     }
 }

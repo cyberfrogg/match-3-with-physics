@@ -1,4 +1,4 @@
-using Game.Factories.Player;
+using Game.Factories.Column;
 using Game.Providers.GameFieldProvider;
 using ProtoYeet.Core.Log.Services;
 using ProtoYeet.Core.Systems;
@@ -11,31 +11,40 @@ namespace Game.Systems
         private readonly IGameFieldProvider _gameFieldProvider;
         private readonly ILoggerService _loggerService;
         private readonly DiContainer _container;
-        private readonly IPlayerPresenterFactory _playerPresenterFactory;
+        private readonly IColumnFactory _columnFactory;
 
         public InitializeGameSystem(
             IGameFieldProvider gameFieldProvider,
             ILoggerService loggerService,
             DiContainer container,
-            IPlayerPresenterFactory playerPresenterFactory
+            IColumnFactory columnFactory
             )
         {
             _gameFieldProvider = gameFieldProvider;
             _loggerService = loggerService;
             _container = container;
-            _playerPresenterFactory = playerPresenterFactory;
+            _columnFactory = columnFactory;
         }
 
         public void Initialize()
         {
             _loggerService.Log(this, "Initialize Game");
-            CreatePlayer();
+            
+            CreateColumns();
+            CreateCamera();
         }
 
-        private void CreatePlayer()
+        private void CreateColumns()
         {
-            var playerView = _gameFieldProvider.GameFieldView.PlayerView;
-            _playerPresenterFactory.Create(playerView);
+            foreach (var columnView in _gameFieldProvider.GameFieldView.ColumnViews)
+            {
+                _columnFactory.Create(columnView);
+            }
+        }
+
+        private void CreateCamera()
+        {
+            
         }
     }
 }

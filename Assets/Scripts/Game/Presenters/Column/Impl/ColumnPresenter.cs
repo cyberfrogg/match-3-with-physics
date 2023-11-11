@@ -1,23 +1,23 @@
-using Game.Views.Player;
+using Game.Views.Column;
 using ProtoYeet.Core.Bootstrap.Services.GameLoop;
 using ProtoYeet.Core.Log.Services;
 using ProtoYeet.Core.Systems;
 using Zenject;
 
-namespace Game.Presenters.Player.Impl
+namespace Game.Presenters.Column.Impl
 {
-    public class PlayerPresenter : IPlayerPresenter, IUpdateSystem
+    public class ColumnPresenter : IColumnPresenter, IUpdateSystem
     {
         [Inject] private readonly ILoggerService _loggerService;
         [Inject] private readonly IGameLoopManager _gameLoopManager;
         
-        public IPlayerView View { get; }
+        public IColumnView View { get; }
         
-        public PlayerPresenter(
-            IPlayerView playerView
-            )
+        public ColumnPresenter(
+            IColumnView columnView
+        )
         {
-            View = playerView;
+            View = columnView;
         }
 
         public void Update()

@@ -1,6 +1,6 @@
 using Game.Data;
-using Game.Factories.Player;
-using Game.Factories.Player.Impl;
+using Game.Factories.Column;
+using Game.Factories.Column.Impl;
 using Game.Providers.GameFieldProvider;
 using Game.Providers.GameFieldProvider.Impl;
 using Game.Systems;
@@ -23,7 +23,7 @@ namespace Game.Installers
 
         private void BindFactories()
         {
-            Container.Bind<IPlayerPresenterFactory>().To<PlayerPresenterFactory>().AsSingle();
+            Container.Bind<IColumnFactory>().To<ColumnFactory>().AsSingle();
         }
         
         private void BindGameField()
