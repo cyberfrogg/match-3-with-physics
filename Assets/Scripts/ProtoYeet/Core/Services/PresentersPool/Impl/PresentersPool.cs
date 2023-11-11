@@ -8,6 +8,8 @@ namespace ProtoYeet.Core.Services.PresentersPool.Impl
     {
         private readonly List<IPresenter<IView>> _presenters = new ();
 
+        public List<IPresenter<IView>> AllPresenters => _presenters;
+
         public void Add(IPresenter<IView> presenter)
         {
             _presenters.Add(presenter);

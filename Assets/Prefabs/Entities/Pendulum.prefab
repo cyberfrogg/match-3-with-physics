@@ -197,7 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attachParent: {fileID: 4198818847015772901}
   rotateAnchor: {fileID: 4198818846934620963}
-  rotateAnimationSpeed: 10
+  rotateAnimationSpeed: 1
+  rotateAnimationAmplitude: 30
 --- !u!1 &4198818847015772900
 GameObject:
   m_ObjectHideFlags: 0

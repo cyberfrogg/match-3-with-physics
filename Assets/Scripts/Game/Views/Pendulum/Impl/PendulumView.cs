@@ -8,11 +8,13 @@ namespace Game.Views.Pendulum.Impl
         [SerializeField] private Transform attachParent;
         [SerializeField] private Transform rotateAnchor;
         [SerializeField] private float rotateAnimationSpeed;
+        [SerializeField] private float rotateAnimationAmplitude;
 
         private float _pendulumRotation;
         
         public Transform AttachParent => attachParent;
         public float RotateAnimationSpeed => rotateAnimationSpeed;
+        public float PendulumRotationAmplitude => rotateAnimationAmplitude;
 
         public float PendulumRotation
         {

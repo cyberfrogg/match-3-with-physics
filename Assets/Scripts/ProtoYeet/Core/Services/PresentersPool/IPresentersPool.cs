@@ -5,6 +5,8 @@ namespace ProtoYeet.Core.Services.PresentersPool
 {
     public interface IPresentersPool
     {
+        List<IPresenter<IView>> AllPresenters { get; }
+            
         void Add(IPresenter<IView> presenter);
         void Remove(IPresenter<IView> presenter);
         

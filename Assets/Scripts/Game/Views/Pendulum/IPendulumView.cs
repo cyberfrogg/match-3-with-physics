@@ -7,6 +7,7 @@ namespace Game.Views.Pendulum
     {
         Transform AttachParent { get; }
         float RotateAnimationSpeed { get; }
+        float PendulumRotationAmplitude { get; }
         float PendulumRotation { get; set; }
     }
 }

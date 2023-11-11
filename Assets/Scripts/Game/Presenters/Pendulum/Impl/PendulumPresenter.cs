@@ -1,11 +1,10 @@
 using Game.Presenters.Ball;
 using Game.Views.Pendulum;
-using ProtoYeet.Core.Systems;
 using UnityEngine;
 
 namespace Game.Presenters.Pendulum.Impl
 {
-    public class PendulumPresenter : IPendulumPresenter, IUpdateSystem
+    public class PendulumPresenter : IPendulumPresenter
     {
         public IPendulumView View { get; }
 
@@ -18,7 +17,14 @@ namespace Game.Presenters.Pendulum.Impl
 
         public void OnInject()
         {
-            
+            View.UpdateEvent += OnUpdate;
+            View.OnDestroyEvent += OnDestroy;
+        }
+
+        private void OnDestroy()
+        {
+            View.UpdateEvent -= OnUpdate;
+            View.OnDestroyEvent -= OnDestroy;
         }
 
         public void AttachBall(IBallPresenter ballPresenter)
@@ -40,11 +46,11 @@ namespace Game.Presenters.Pendulum.Impl
         }
 
         public IBallPresenter CurrentAttachedBall { get; private set; }
-        
-        public void Update()
+
+        private void OnUpdate()
         {
             var time = Time.time;
-            var rotateValue = Mathf.Sin(time * View.RotateAnimationSpeed);
+            var rotateValue = Mathf.Sin(time * View.RotateAnimationSpeed) * View.PendulumRotationAmplitude;
 
             View.PendulumRotation = rotateValue;
         }
